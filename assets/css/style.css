@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Top of page */
+header {
+    line-height: 10vh;
+    width: 100%;
+    text-align: center;
+    color: black;
+    background-color: #00000040;
+    padding-top: 0;
+}
+
+h1 {
+    font-size: 45px;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Main content */
+main {
+    min-height: 88vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.box-1 {
+    width: 30%;
+    height: 30%;
+    padding: 10px;
+    background-color: blue;
+    display: inline-block;
+}
+
+.box-2 {
+    width: 30%;
+    height: 30%;
+    padding: 10px;
+    background-color: blue;
+    display: inline-block;
+}
+
+/* Footer */
+footer {
+    height: 6vh;
+    width: 100%;
+    text-align: center;
+    color: black;
+    background-color: #00000040;
+    padding-top: 5px;
+}
