@@ -62,17 +62,21 @@ footer {
 
 @media only screen and (max-device-width: 480px) {
  .box-1 {
-    position: absolute;
-    height: 50%;
-    width: 60%;
-    margin: 5px;
-    padding: 20px;
+    top: 10%;
+    left: 5%;
+    width: 70%;
  }
 
- .box-2 {
-    position: absolute;
-    height: 0;
-    width: 60%;
-    
+ .box-2 { 
+    top: 10%;
+    right: 5%;
+    width: 70%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 }
