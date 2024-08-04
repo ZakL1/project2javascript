@@ -1,11 +1,14 @@
 const choices = ["ROCK", "PAPER", "SCISSORS"]
 
 
-function playGame(playerSelection) {
-     
-     const computerSelection = selection[Math.floor(Math.random() * 3)];
+function playGame() {
+          
+      const random = Math.floor(Math.random() * choices.length);
+      console.log(random, choices[random]);
 
-     console.log(computerSelection);
+}
+
+function playerChoice() {
 
 }
 
