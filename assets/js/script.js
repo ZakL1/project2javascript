@@ -1,12 +1,28 @@
-const choices = ["ROCK", "PAPER", "SCISSORS"]
+const choices = ["rock", "paper", "scissors"]
 const playerAnswer = document.getElementById("playerAnswer");
 const computerAnswer = document.getElementById("computerAnswer");
+const result = document.getElementById("result");
+const totalScore = document.getElementById("totalScore");
+const player_choices  = Array.from(document.querySelectorAll(".player_choice"));
+
+// player_choice.addEventListener("click", function(){
+     // console.log("I've been clicked")
+//});
+
+
+
+
+
+
+
 
 
 function playGame(playerChoice) {
           
-      const computerChoice = Math.floor(Math.random() * choices.length);
-      let result = "";
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+      console.log(computerChoice);
+     // let result = "";
       
       
 
@@ -31,7 +47,7 @@ function playGame(playerChoice) {
 
       playerAnswer.textContent = `Player: ${playerChoice}`;
       computerAnswer.textContent = `Computer: ${computerChoice}`;
-      resultDisplay.textContent = result;
+     // resultDisplay.textContent = result;
 }
 
 function displayPlayerChoice(rock, paper, scissors) {
@@ -59,3 +75,13 @@ function displayScore() {
 function gameOver () {
 
 }
+
+
+window.addEventListener("DOMContentLoaded", (event) => {
+
+    player_choices.forEach(player_choice => {
+      player_choice.addEventListener('click', function(){
+            console.log("I've been clicked");
+      })
+    });
+});

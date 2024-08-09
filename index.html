@@ -19,19 +19,21 @@
     <section class="boxes">
       <div class="box-1"> 
           
-           <p>You</p>
+           <p>Make your move!</p>
 
              <div class="buttons">
 
-               <button data-type="ROCK" onclick="playGame()" class="player_choice">
+              
+
+              <button data-type="ROCK"  class="player_choice">
                 <i class="fa-solid fa-hand-fist"></i>
               </button>
 
-               <button data-type="PAPER" onclick="playGame()" class="player_choice">
+               <button data-type="PAPER" class="player_choice">
                 <i class="fa-solid fa-hand"></i>
               </button>
 
-               <button data-type="SCISSORS" onclick="playGame()" class="player_choice">
+               <button data-type="SCISSORS"  class="player_choice">
                 <i class="fa-solid fa-hand-scissors"></i>
               </button>
 
@@ -39,42 +41,21 @@
 
       </div>
 
-      <div class="box-2">
-        
-           <p>Computer</p>
-
-             <div class="buttons">
-
-               <button data-type="ROCK" class="rock">
-                 <i class="fa-solid fa-hand-fist">
-                </i></button>
-
-               <button data-type="PAPER" class="paper">
-                 <i class="fa-solid fa-hand"></i>
-               </button>
-
-               <button data-type="SCISSORS" class="scissors">
-                 <i class="fa-solid fa-hand-scissors"></i>
-               </button>
-
-             </div>
-      </div>
+      
     </section>
      
     <section>
 
-       <div id="playerAnswer">
-        <h2>Player:</h2>
+       <div id="answerDiv">
+
+        <h2 class="answer" id="playerAnswer">Player: </h2>
+        <h2 class="answer" id="computerAnswer">Computer: </h2>
+        <h2 class="answer" id="result">Result: </h2>
         
       </div>
 
-       <div id="computerAnswer">
-        <h2>Computer:</h2>
-        
-      </div>
-
-       <div id="totalScore">
-        <h2>Score:</h2>
+       <div id="scoreDiv">
+        <h3 id="totalScore">Score: </h3>
        </div>
 
     </section>
