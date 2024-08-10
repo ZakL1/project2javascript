@@ -1,60 +1,50 @@
-const choices = ["Rock", "Paper", "Scissors"]
+const choices = ["rock", "paper", "scissors"]
 const playerAnswer = document.getElementById("playerAnswer");
 const computerAnswer = document.getElementById("computerAnswer");
 const result = document.getElementById("result");
 const totalScore = document.getElementById("totalScore");
 const player_choices  = Array.from(document.querySelectorAll(".player_choice"));
 
-// player_choice.addEventListener("click", function(){
-     // console.log("I've been clicked")
-//});
 
 
 
 
 
 
+// Update our function with the computerChoice argument so we can use it here
+function playGame(playerChoice, computerChoice) {
+      // Console log our choices just to check
+      console.log("Player choice: ", playerChoice)
+      console.log("Computer choice: ", computerChoice)
 
+      let tempResult;
 
-
-function playGame(playerChoice) {
-          
-      const computerChoice = choices[Math.floor(Math.random() * 3)];
-
-      console.log(computerChoice);
-      let result = "";
-      
-      
-
-      if (playerChoice === "computerChoice") {
-            result = "It's a tie!";
+      if (playerChoice === computerChoice) {
+            tempResult = "It's a tie!";
       } else {
             switch(playerChoice){
                   case "rock":
-                        result = (computerChoice === "scissors") ? "You win :)" : "You lose :(";
+                        tempResult = (computerChoice === "scissors") ? "You win :)" : "You lose :(";
                         break;
                   case "paper":
-                        result = (computerChoice=== "rock") ? "You win :)" : "You lose :(";
+                        tempResult = (computerChoice=== "rock") ? "You win :)" : "You lose :(";
                         break;
                   case "scissors":
-                        result = (computerChoice === "paper") ? "You win :)" : "You lose :(";
+                        tempResult = (computerChoice === "paper") ? "You win :)" : "You lose :(";
                         break;      
             }
+            
       }
 
-  
+      result.textContent = "Result: " + tempResult;
     
 
-      playerAnswer.textContent = `Player: ${playerChoice}`;
-      computerAnswer.textContent = `Computer: ${computerChoice}`;
-     // resultDisplay.textContent = result;
+    
 }
 
-function displayPlayerChoice(rock, paper, scissors) {
+function displayPlayerChoice() {
 
-       document.getElementsByclassname('rock').textContent = rock;
-       document.getElementsByclassname('paper').textContent = paper;
-       document.getElementsByclassname('scissors').textContent = scissors;
+      
 
 }
 
@@ -71,16 +61,32 @@ function gameOver () {
 }
 
 
+/**
+ * This code displayed the computers choice when a button is
+ * pressed and displays it on the screen
+ */
+ 
+
 window.addEventListener("DOMContentLoaded", (event) => {
 
     player_choices.forEach(player_choice => {
-      player_choice.addEventListener('click', function playGame(){
-            
+      player_choice.addEventListener('click', function () {  // just a regulary function
 
-      const computerChoice = choices[Math.floor(Math.random() * 3)];
-      document.getElementById("computerAnswer").textContent = ("Computer: ") + computerChoice;
+            const playerChoice = player_choice.dataset.type  // retrieve the player's choice from the data-type attribute
+            playerAnswer.innerHTML = "Player: " + playerChoice  // update player display
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+            document.getElementById("computerAnswer").textContent = ("Computer: ") + computerChoice;
       
-      })
+            // Call our playGame function here and pass it the playerChoice and computerChoice we've set here:
+            playGame(playerChoice, computerChoice)
+      });
       
     });
+
+
 });
+
+
+
+
+
