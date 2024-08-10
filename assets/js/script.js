@@ -1,4 +1,4 @@
-const choices = ["rock", "paper", "scissors"]
+const choices = ["Rock", "Paper", "Scissors"]
 const playerAnswer = document.getElementById("playerAnswer");
 const computerAnswer = document.getElementById("computerAnswer");
 const result = document.getElementById("result");
@@ -22,11 +22,11 @@ function playGame(playerChoice) {
       const computerChoice = choices[Math.floor(Math.random() * 3)];
 
       console.log(computerChoice);
-     // let result = "";
+      let result = "";
       
       
 
-      if (playerChoice === "random") {
+      if (playerChoice === "computerChoice") {
             result = "It's a tie!";
       } else {
             switch(playerChoice){
@@ -57,12 +57,6 @@ function displayPlayerChoice(rock, paper, scissors) {
        document.getElementsByclassname('scissors').textContent = scissors;
 
 }
- 
-function displayComputerChoice() {
-      
-}
-
-
 
 function winner() {
 
@@ -80,8 +74,13 @@ function gameOver () {
 window.addEventListener("DOMContentLoaded", (event) => {
 
     player_choices.forEach(player_choice => {
-      player_choice.addEventListener('click', function(){
-            console.log("I've been clicked");
+      player_choice.addEventListener('click', function playGame(){
+            
+
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+      document.getElementById("computerAnswer").textContent = ("Computer: ") + computerChoice;
+      
       })
+      
     });
 });
