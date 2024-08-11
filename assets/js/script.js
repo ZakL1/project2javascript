@@ -5,6 +5,7 @@ const result = document.getElementById("result");
 const totalScore = document.getElementById("totalScore");
 const player_choices  = Array.from(document.querySelectorAll(".player_choice"));
 const computer = document.getElementById("computer");
+const restart = document.querySelector('.restart');
 let score = 0;
 let computerScore = 0;
 
@@ -49,22 +50,18 @@ function playGame(playerChoice, computerChoice) {
             computer.textContent = "Computer score: " + computerScore++;
       }
 
-      
-
-     
-
-    
 }
 
 
-function incrementScore() {
 
-       
-}
+      // this button refreshes the game
+      const restartPage = () => {
+            location.reload();
+          }
+          
+          restart.addEventListener('click', restartPage)
 
-function gameReset() {
 
-}
 
 
 /**
