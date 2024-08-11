@@ -4,7 +4,9 @@ const computerAnswer = document.getElementById("computerAnswer");
 const result = document.getElementById("result");
 const totalScore = document.getElementById("totalScore");
 const player_choices  = Array.from(document.querySelectorAll(".player_choice"));
-
+const computer = document.getElementById("computer");
+let score = 0;
+let computerScore = 0;
 
 
 
@@ -35,28 +37,32 @@ function playGame(playerChoice, computerChoice) {
             }
             
       }
-
+      
+      // displays result of game
       result.textContent = "Result: " + tempResult;
-    
+      
 
-    
-}
-
-function displayPlayerChoice() {
+      // increments score for player and computer
+      if (tempResult == "You win :)") {
+            totalScore.textContent = "Player score: " + score++;
+      } else (tempResult == "You lose :("); {
+            computer.textContent = "Computer score: " + computerScore++;
+      }
 
       
 
+     
+
+    
 }
 
-function winner() {
 
+function incrementScore() {
+
+       
 }
 
-function displayScore() {
-
-}
-
-function gameOver () {
+function gameReset() {
 
 }
 
