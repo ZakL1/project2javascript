@@ -6,8 +6,8 @@ const totalScore = document.getElementById("totalScore");
 const player_choices  = Array.from(document.querySelectorAll(".player_choice"));
 const computer = document.getElementById("computer");
 const restart = document.querySelector('.restart');
-let score = 0;
-let computerScore = 0;
+let score = 1;
+let computerScore = 1;
 
 
 
@@ -44,12 +44,15 @@ function playGame(playerChoice, computerChoice) {
       
 
       // increments score for player and computer
-      if (tempResult == "You win :)") {
+      if (tempResult === "You win :)") {
             totalScore.textContent = "Player score: " + score++;
-      } else (tempResult == "You lose :("); {
-            computer.textContent = "Computer score: " + computerScore++;
-      }
+      }; 
 
+      if (tempResult === "You lose :(") {
+            computer.textContent = "Player score: " + computerScore++;
+      }; 
+      
+            
 }
 
 
