@@ -1,8 +1,9 @@
-# Love Maths
+# Rock Paper Scissors
 
-In this section, you will include one or two paragraphs providing an overview of your project. Essentially, this part is your sales pitch. At this stage, you should have a name for your project so use it! Don’t introduce the project as a Portfolio project for the diploma. In this section, describe what the project hopes to accomplish, who it is intended to target and how it will be useful to the target audience. 
+Rock Paper Scissors is a fun easy to learn game anyone can play, it caters to all ages and is fun to do. The bottom of the site has a helpful link for people who are new to the game but I'm sure that most people will have played it gorwing up. 
 
-For example, Love Maths is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also maths. Love Maths is a fully responsive JavaScript maths game that will allow users to add, subtract, multiply and divide numbers. 
+The javascript is simple and easy to understand with no complications. The game has 3 buttons: Rock, paper and scissors, the user will choose one of these and the computer will pick at random, the results will display in boxes below the buttons and the scores are counted for the user and computer. Also there is a helpful reset button that refreshes the scores if the user wants to start again at 0. 
+
 
 ![Responsice Mockup](media/love_maths_mockup.png)
 

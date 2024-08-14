@@ -1,6 +1,5 @@
 const choices = ["rock", "paper", "scissors"];
 const playerAnswer = document.getElementById("playerAnswer");
-const computerAnswer = document.getElementById("computerAnswer");
 const result = document.getElementById("result");
 const totalScore = document.getElementById("totalScore");
 const player_choices = Array.from(document.querySelectorAll(".player_choice"));
